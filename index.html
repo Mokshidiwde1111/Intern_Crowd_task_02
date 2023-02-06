@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern_Crowd</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg_page">
+        <div class="navi_bar">
+            <div >
+                <a href="https://Oyefill.com">OYEFILL.COM</a>
+            </div>
+            <nav>
+                <ul id="menu_items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a>
+                    <button class="loginbtn" onclick="document.getElementById('login-form').style.display='block'" style="width: auto;">login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="sign_form" class="sign_up">
+            <form>
+                <div class="container ">
+                    <h3>Sign Up</h3>
+                    <p>Kindly fill this form</p>
+                    <label for="username"><b>Username</b></label>
+                    <input type="text"
+                    placeholder="Enter Username."
+                    name="username"
+                    id="username"
+                    required
+                    />
+                    <label for="contact"><b>Phone number</b></label>
+                    <input type="tel"
+                    placeholder="Enter mobile number."
+                    name="contact"
+                    id="contact"
+                    required
+                    />
+                    <label for="dob"><b>Date of birth</b></label>
+                    <input type="date"
+                    name="dob"
+                    id="dob"
+                    required
+                    />
+                    <label for="email"><b>Email</b></label>
+                    <input type="text"
+                    placeholder="Enter Email"
+                    name="email"
+                    id="email"
+                    required
+                    />
+                    <label for="pwd"><b>Password</b></label>
+                    <input type="password"
+                    placeholder="Enter Password."
+                    name="pwd"
+                    id="pwd"
+                    required
+                    />
+                    <label for="repeat-pwd"><b>Repeat Password</b></label>
+                    <input type="password"
+                    placeholder="Repeat Password."
+                    name="repeat-pwd"
+                    id="repeat-pwd"
+                    required
+                    />
+                    <button type="submit">Register</button>
+                </div>
+                <div>
+                    <p>Already have an account? <a href="#">Log in</a>.</p>
+                </div>
+            </form>
+        </div>
+        <div id="login_form" class="login_page">
+            <div class="form_box">
+                <div class="button_box">
+                    <div id="btn"></div>
+                    <button type='button' onclick='login()' class="toggle_btn">Log In</button>
+                    <button type="button" onclick="register()" class="toggle_btn">Register</button>
+                </div>
+                <form id="login" class="input_group_login">
+                    <input type="text" class="input_field" placeholder="Email Id" required>
+                    <input type="password" class="input_field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check_box" ><span>Remember Password</span>
+                    <button type="submit" class="submit_btn">Log In</button>
+                </form>
+                <form id="register" class="input_group_register">
+                    <input type="text" class="input_field" placeholder="First Name" required>
+                    <input type="email" class="input_field" placeholder="Last Name" required>
+                    <input type="password" class="input_field" placeholder="Enter Password" required>
+                    <input type="password" class="input_field" placeholder="Confirm Password" required>
+                    <input type="checkbox" class="check_box"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit_btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register(){
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        function login(){
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+    </script>
+    <script>
+        var modal=document.getElementById('login_form');
+        window.onclick = function(event){
+            if (event.target == modal)
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
